@@ -1,0 +1,66 @@
+{
+  "name": "SavedItem",
+  "type": "object",
+  "properties": {
+    "item_type": {
+      "type": "string",
+      "enum": [
+        "trip",
+        "accommodation",
+        "restaurant",
+        "excursion"
+      ]
+    },
+    "trip_id": {
+      "type": "string"
+    },
+    "item_name": {
+      "type": "string"
+    },
+    "destination": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "details": {
+      "type": "object"
+    },
+    "booking_checklist": {
+      "type": "object",
+      "properties": {
+        "flights_booked": {
+          "type": "boolean",
+          "default": false
+        },
+        "accommodation_booked": {
+          "type": "boolean",
+          "default": false
+        },
+        "activities_booked": {
+          "type": "boolean",
+          "default": false
+        },
+        "insurance_sorted": {
+          "type": "boolean",
+          "default": false
+        },
+        "visa_confirmed": {
+          "type": "boolean",
+          "default": false
+        },
+        "bank_notified": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    }
+  },
+  "required": [
+    "item_type",
+    "item_name"
+  ]
+}

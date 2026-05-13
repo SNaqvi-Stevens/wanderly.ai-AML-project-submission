@@ -1,0 +1,354 @@
+{
+  "name": "Trip",
+  "type": "object",
+  "properties": {
+    "destination_name": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "hero_image": {
+      "type": "string"
+    },
+    "recommended_dates": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "string"
+        },
+        "end": {
+          "type": "string"
+        }
+      }
+    },
+    "trip_length_days": {
+      "type": "number"
+    },
+    "total_cost_budget": {
+      "type": "number"
+    },
+    "total_cost_comfortable": {
+      "type": "number"
+    },
+    "total_cost_splurge": {
+      "type": "number"
+    },
+    "user_budget_cap": {
+      "type": "number"
+    },
+    "season_label": {
+      "type": "string",
+      "enum": [
+        "Peak",
+        "Shoulder",
+        "Off-Peak"
+      ]
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "season": {
+          "type": "number"
+        },
+        "budget_fit": {
+          "type": "number"
+        },
+        "match": {
+          "type": "number"
+        },
+        "feasibility": {
+          "type": "number"
+        },
+        "overall": {
+          "type": "number"
+        }
+      }
+    },
+    "why_we_love_this": {
+      "type": "string"
+    },
+    "overview_text": {
+      "type": "string"
+    },
+    "season_analysis": {
+      "type": "string"
+    },
+    "weather_summary": {
+      "type": "object"
+    },
+    "budget_breakdown": {
+      "type": "object"
+    },
+    "flights": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "accommodations": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "restaurants": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "excursions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "transportation": {
+      "type": "object"
+    },
+    "itinerary": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "lower_cost_tips": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "student_tips": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "similar_vibe_alternatives": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "is_bucket_list": {
+      "type": "boolean",
+      "default": false
+    },
+    "preference_matches": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preferences_id": {
+      "type": "string"
+    },
+    "generation_batch": {
+      "type": "string"
+    },
+    "is_favorited": {
+      "type": "boolean",
+      "default": false
+    },
+    "planning_status": {
+      "type": "string",
+      "enum": [
+        "saved",
+        "planning",
+        "booked",
+        "completed"
+      ],
+      "default": "saved"
+    },
+    "trip_dates": {
+      "type": "object",
+      "properties": {
+        "departure": {
+          "type": "string"
+        },
+        "return": {
+          "type": "string"
+        }
+      }
+    },
+    "booking_confirmations": {
+      "type": "object",
+      "properties": {
+        "flights": {
+          "type": "string"
+        },
+        "hotel": {
+          "type": "string"
+        },
+        "car_rental": {
+          "type": "string"
+        },
+        "travel_insurance": {
+          "type": "string"
+        },
+        "tours": {
+          "type": "string"
+        },
+        "visa": {
+          "type": "string"
+        },
+        "airport_transfer": {
+          "type": "string"
+        }
+      }
+    },
+    "booking_status": {
+      "type": "object",
+      "properties": {
+        "flights_booked": {
+          "type": "boolean",
+          "default": false
+        },
+        "hotel_booked": {
+          "type": "boolean",
+          "default": false
+        },
+        "car_rental_booked": {
+          "type": "boolean",
+          "default": false
+        },
+        "travel_insurance_booked": {
+          "type": "boolean",
+          "default": false
+        },
+        "tours_booked": {
+          "type": "boolean",
+          "default": false
+        },
+        "visa_confirmed": {
+          "type": "boolean",
+          "default": false
+        },
+        "airport_transfer_booked": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "predeparture_checklist": {
+      "type": "object",
+      "properties": {
+        "passport_checked": {
+          "type": "boolean",
+          "default": false
+        },
+        "travel_insurance_docs": {
+          "type": "boolean",
+          "default": false
+        },
+        "foreign_currency_obtained": {
+          "type": "boolean",
+          "default": false
+        },
+        "bank_notified": {
+          "type": "boolean",
+          "default": false
+        },
+        "phone_plan_sorted": {
+          "type": "boolean",
+          "default": false
+        },
+        "accommodation_confirmed": {
+          "type": "boolean",
+          "default": false
+        },
+        "transport_to_airport_arranged": {
+          "type": "boolean",
+          "default": false
+        },
+        "luggage_packed": {
+          "type": "boolean",
+          "default": false
+        },
+        "carry_on_packed": {
+          "type": "boolean",
+          "default": false
+        },
+        "electronics_charged": {
+          "type": "boolean",
+          "default": false
+        },
+        "medications_packed": {
+          "type": "boolean",
+          "default": false
+        },
+        "house_secured": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "filename": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "uploadedAt": {
+            "type": "string"
+          }
+        }
+      },
+      "default": []
+    },
+    "spending": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "description": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "receipt_url": {
+            "type": "string"
+          }
+        }
+      },
+      "default": []
+    },
+    "ml_score": {
+      "type": "number"
+    },
+    "blended_score": {
+      "type": "number"
+    },
+    "score_breakdown": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "destination_name"
+  ]
+}
